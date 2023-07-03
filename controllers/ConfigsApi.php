@@ -1,7 +1,5 @@
 <?php namespace Wpjscc\Ui\Controllers;
 
-use BackendMenu;
-//use Backend\Classes\Controller;
 use Wpjscc\Api\Classes\Controller;
 use Wpjscc\Api\Classes\ApiController;
 use Wpjscc\Ui\Models\Config;
@@ -12,8 +10,7 @@ class ConfigsApi extends Controller
 {
      //黑名单
     protected $guarded = [
-        // 'update',
-        'onDelete'
+  
     ];
 
     protected $publicActions = ['index'];
@@ -39,90 +36,64 @@ class ConfigsApi extends Controller
         return [
             'plugins' =>  $config
         ];
-        // return 
-        return  [
-            'plugins' => [
-                [
-                    'api' => 'wpjscc/swiper/swipersapi',
-                    'type' => 'winter-swiper'
-                ],
-                [
-                    'api' => 'wpjscc/api/testsapi',
-                    'type' => 'winter-index'
-                ],
-                [
-                    'type' => 'winter-nav',
-                    'is_fixed' => true,
-                    'left_options' => [
-                        [
-                            'icon' => 'home',
-                            'text' => '首页',
-                            'type' => 'route',
-                            'route' => [
-                                'type' => 'switchTab',
-                                'url' => 'pages/tabbar/index',
-                                'params' => [
-                                    'ui' => 'abcdef'
-                                ],
-                            ]
-                        ],
-                        // [
-                        //     'icon' => 'chat',
-                        //     'text' => '客服',
-                        // ],
-                        // [
-                        //     "icon" => "shop",
-                        //     "text" => "店铺",
-                        //     "info" => 3,
-                        //     "infoBackgroundColor" => "#007aff",
-                        //     "infoColor" => "#f5f5f5",
-                        // ],
-                        // [
-                        //     "icon" => "cart",
-                        //     "text" => "购物车",
-                        //     "info" => 7,
-                        //     "type" => "popup_list",
-                        //     "popup_list" => [
-                        //         "popup_list_api" => "wpjscc/api/testcartsapi",
-                        //     ]
-                        // ],
-                        [
-                            "icon" => "person",
-                            "text" => "我的",
-                            "type" => "route",
-                            "route" =>  [
-                                "type" => "switchTab",
-                                "url" => "pages/tabbar/my",
-                                "params" => [
-                                    "ui" => "abcdef"
-                                ]
-                            ]
-                        ]
-                    ],
-                    'right_options' => [
-
-                    ],
-                ],
-            ]
-        ];
     }
 
-
-    //自定义处理器
-    public function index_onTest()
+    public function index_onDelete()
     {
-        $this->putUserPreference('abc', 'def');
-        $this->putUserPreference('a', 'b');
-        $this->putUserPreference('c', 'd');
-        $this->clearUserPreference('abc');
-        
-        return $this->success([
-            'ajax' => 'true',
-            'a' => $this->getUserPreference('a'),
-            'c' => $this->getUserPreference('c'),
-            'abc' => $this->getUserPreference('abc'),
-            'getUserPreferences' => $this->getUserPreferences()
-        ]);
+
     }
+
+    public function create($context = null)
+    {
+
+    }
+
+    public function create_onSave($context = null)
+    {
+
+    }
+
+    public function create_onRelationRender()
+    {
+       
+    }
+
+    public function update($recordId = null, $context = null)
+    {
+
+    }
+
+    public function update_onSave($recordId = null, $context = null)
+    {
+
+    }
+
+    public function update_onDelete($recordId = null)
+    {
+
+    }
+
+    public function update_onRelationRender($recordId = null)
+    {
+      
+    }
+
+    public function preview($recordId = null, $context = null)
+    {
+
+    }
+
+    public function preview_onSave($recordId = null, $context = null)
+    {
+
+    }
+
+    public function preview_onRelationRender($recordId = null)
+    {
+        
+    }
+
+
+    
 
 }
