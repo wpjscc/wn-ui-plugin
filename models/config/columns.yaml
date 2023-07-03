@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: 'wpjscc.ui::lang.models.general.id'
+        searchable: true
+    title:
+    code:
+        clickable: false
+    is_default:
+    created_at:
+        label: 'wpjscc.ui::lang.models.general.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        invisible: true
+    updated_at:
+        label: 'wpjscc.ui::lang.models.general.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true

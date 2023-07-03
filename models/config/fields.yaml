@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    # id:
+    #     label: 'wpjscc.ui::lang.models.general.id'
+    #     disabled: true
+    title:
+    is_default:
+        label: is_default
+        type: checkbox
+    config:
+       label: config
+       type: codeeditor
+       language: json
+       
+
+

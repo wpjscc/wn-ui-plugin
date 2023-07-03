@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'wpjscc.ui::lang.models.config.label'
+
+# Model Form Field configuration
+form: $/wpjscc/ui/models/config/fields.yaml
+
+# Model Class name
+modelClass: Wpjscc\Ui\Models\Config
+
+# Default redirect location
+defaultRedirect: wpjscc/ui/configs
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: wpjscc/ui/configs/update/:id
+    redirectClose: wpjscc/ui/configs
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: wpjscc/ui/configs
+    redirectClose: wpjscc/ui/configs
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

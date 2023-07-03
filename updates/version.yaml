@@ -1,0 +1,5 @@
+'1.0.0':
+    - 'First version of ui'
+1.0.1:
+    - 'creat table'
+    - 202211051452_create_config_table.php
