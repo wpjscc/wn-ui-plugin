@@ -33,8 +33,12 @@ class ConfigsApi extends Controller
             $config = Config::getDefaultConfig();
         }
 
+        $actions = $config['actions'] ?? new \stdClass;
+        unset($config['actions']);
+
         return [
-            'plugins' =>  $config
+            'plugins' =>  $config,
+            'actions' => $actions
         ];
     }
 
